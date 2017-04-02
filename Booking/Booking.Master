@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Booking.master.cs" Inherits="Booking.Booking" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+        <meta name="description" content="Booking & Travel" />
+        <meta name="keywords" content="Booking, Travel, Empire, Hotel, Accommodation, Spa, Ambassador" />
+        <meta name="author" content="Khairil Azhar" />
+        <link href="~/CSS/Style.css" rel="stylesheet" type="text/css" />
+        <link href="~/CSS/jquery-ui.css" rel="stylesheet" type="text/css" />
+        <script src="~/JS/menu_image.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrap">
+        <div id="top_header">	  
+          <a href="Index.html"><img src="Image/logo.png" alt="empire_logo" width="310" height="145"/></a>
+          <a href="Index.html"><img src="Image/empire_banner2.png" width="567" height="144" alt="empire_banner"/></a>      
+	    </div>
+	
+	<div id="top_nav">
+		<hr />
+		<ul>
+		<li><a href="~/Default.aspx">Home</a></li>
+		<li><a href="~/Accommodation.aspx">Accommodation</a></li>
+		<li><a href="~/Other_Services.aspx">Other Services</a></li>
+		<li><a href="~/Contact.aspx">Contact Us</a></li>
+        <li><a href="~/Login.aspx">Login</a></li>
+		</ul>
+		<hr />
+	</div>
+    <div id="content_wrapper">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <div id="footer">
+            <div id="footer_left">
+                <p>Copyright &copy; 2017 | Booking & Travel 	|&nbsp; 
+                <a href="Admin.html">Administrator</a></p>
+                <a href="http://validator.w3.org/check?uri=referer">Validate HTML</a>
+		        <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
+		        <a href="http://achecker.ca/checker/?uri=referer">Check WCAG</a>
+            </div>
+		    <div id="footer_right">
+		    <a target="_blank" href="http://www.facebook.com/pages/The-Empire-Hotel-Country-Club-Brunei/149237025097533"><img alt="fb_logo" src="Image/Icon/facebook.png" /></a>
+		    <a target="_blank" href="http://instagram.com/theempirehotelbrunei"><img alt="insta_logo" src="Image/Icon/instagram.png" /></a>
+            </div>
+         </div>
+	</div>
+    </form>
+</body>
+</html>

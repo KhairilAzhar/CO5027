@@ -1,0 +1,151 @@
+﻿/* CSS Document */
+
+/* JS for image */
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+	padding: 0;
+}
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+	top: 0;
+	bottom: 0;
+}
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+	padding: 0;
+}
+
+body				{					
+					background-repeat:no-repeat;
+					background-color: #0080C0;
+					background-position:center;
+					}
+	
+#wrap 
+					{
+					width:900px;
+					background-color: #0080C0;
+					margin:auto;														
+					}
+
+/* Top Header */
+#top_header			{
+					width: 900px;
+					float: inherit;
+					border: 1.5px solid brown;
+					background-color: #FFF;
+					}
+
+/* Navigation */
+hr					{
+					width:900px; 
+					margin: 10px 0px;
+					border-color:#FFF;
+					}
+
+#top_nav 			{clear:both; width:900px; background-color: #333;}
+
+#top_nav ul 		{
+					margin: 0;
+					padding: 0;
+					list-style-type: none;
+					text-align: center;
+					}		
+		
+#top_nav ul li 		{display: inline;}
+
+#top_nav ul li a 	{					
+					font-family: Calibri;
+					font-size: 20px;
+					text-align:center;
+					margin: 0px 5px;
+					padding: 2px 6px;
+					color: white;					
+					}
+					
+#top_nav ul li a:hover {						
+						background-color: red;
+						font-weight:bold;
+						}
+						
+#top_nav ul li	a:visited {color:purple;}
+
+/* Content Section */
+#content_wrapper 	{width:900px; padding:10px 0 10px 0;}
+
+#content 				{float:left; width:900px; margin-bottom:20px;}
+#content h2 a			{color:gold;}
+#content h2 a:hover		{color:aqua;}
+#content h2 a:visited	{color:purple;}
+#content h4 			{color:white;}
+#content p 				{font-size:14px; line-height:140%; text-align:justify; color: white; margin-left:10px;}
+
+.mySlides               {display:none;}
+
+#book					{float:left; width:900px; margin: 20px 0px 20px 20px;}
+
+#second_content					{float: right; width:900px; background-color: #DFF4FF; margin-bottom:20px;}
+#second_content h2				{color:gold; margin-left:20px;}
+
+.book_content			{float:left; width: 160px; display:inline-block; margin-left:20px;}
+.book_available			{float:left; width: 200px; display:inline-block; margin-left:20px;}
+
+#third_content					{float: left; width:900px; background-color:#BFEBFF; margin-bottom:20px;}
+#third_content h2				{color:black; margin-left:10px;}
+#third_content h3 				{color:white;}
+#third_content p				{font-size:14px; line-height:140%; text-align:justify; color: white; margin-left:10px;}
+#third_content ul li 			{color: white; margin: 0px 5px;}
+
+#left_content					{float:left; width:180px; background-color:#FFF; margin:10px 10px;}
+#left_content h2 a				{color:gold; margin-left:10px;}
+#left_content h2 a:hover		{color:aqua;}
+#left_content h2 a:visited		{color:purple;}
+#left_content h3 				{color:white;}
+#left_content p					{font-size:14px; line-height:140%; text-align:justify; color: black; margin-left:10px;}
+#left_content ul li 			{color: white; margin: 0px 5px;}
+
+#right_content					{float: right; margin:10px; width:680px; background-color:#FFF;}
+#right_content h2 a				{color:gold; margin-left:10px;}
+#right_content h2 a:hover		{color:aqua;}
+#right_content h2 a:visited		{color:purple;}
+#right_content h3 				{color:white;}
+#right_content p				{font-size:14px; line-height:140%; text-align:justify; color: black; margin: 0px 10px 10px 10px;}
+#right_content ul li 			{color: white; margin: 0px 5px;}
+
+#mail_content 				{float:left; width:900px; margin-bottom:20px; background-color:#BFEBFF}
+#mail_content h2 a			{color:gold;}
+#mail_content h2 a:hover	{color:aqua;}
+#mail_content h2 a:visited	{color:purple;}
+#mail_content h4 			{color:white;}
+#mail_content p 			{font-size:14px; line-height:140%; text-align:justify; color: white; margin-left:10px;}
+
+#contact					{float:left; width:400px; background-color:#FFF; margin:10px 10px;}
+#contact h3					{color:black; margin-left:10px;}
+#contact p					{font-size:14px; line-height:140%; text-align:justify; color: black; margin-left:10px;}
+
+#mail					{float: right; margin:10px; width:400px; background-color:#FFF;}
+#mail h2 a				{color:gold; margin-left:10px;}
+#mail h2 a:hover		{color:aqua;}
+#mail h2 a:visited		{color:purple;}
+#mail h3 				{color:white;}
+#mail p					{font-size:14px; line-height:140%; text-align:justify; color: black; margin: 0px 10px 10px 10px;}
+#mail ul li 			{color: white; margin: 0px 5px;}
+#mail label				{font-weight: bold;}
+#mail legend			{font-weight: bold;}
+#mail input				{width: 200px;}
+#mail textarea			{width: 200px; height:100px;}
+#mailform				{margin: 10px;}
+#sendmail				{font-weight: bold; margin-bottom: 10px;}
+
+#map					{float: right; width:900px; height:350px; background-color: #DFF4FF; margin-bottom:20px;}
+
+
+
+/* Footer */
+#footer 			    {width:900px; clear:both; padding:1px 0; border-top:1px white solid;}
+#footer_left p 			{text-align:left; font-size:14px; font-weight:bold; color: black; margin-left:20px;}
+#footer_left a 			{text-align:left; font-size:14px; font-weight:bold; color: black; margin-left:20px;}
+#footer_left a:hover	{color:aqua;}
+#footer_left a:visited	{color:purple;}
+#footer_left		    {width:500px; float:left;}
+#footer_right		    {width:200px; float:right; margin-top: 20px;}
