@@ -9,8 +9,8 @@
         <meta name="keywords" content="Booking, Travel, Empire, Hotel, Accommodation, Spa, Ambassador" />
         <meta name="author" content="Khairil Azhar" />
         <link href="~/CSS/Style.css" rel="stylesheet" type="text/css" />
-        <link href="~/CSS/jquery-ui.css" rel="stylesheet" type="text/css" />
-        <script src="~/JS/menu_image.js"></script>
+        <link href="~/CSS/jquery-ui.css" rel="stylesheet" type="text/css" />    
+        <script type="text/javascript" src="JS/menu_image.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
         
     </asp:ContentPlaceHolder>
@@ -19,18 +19,18 @@
     <form id="form1" runat="server">
     <div id="wrap">
         <div id="top_header">	  
-          <a href="Index.html"><img src="Image/logo.png" alt="empire_logo" width="310" height="145"/></a>
-          <a href="Index.html"><img src="Image/empire_banner2.png" width="567" height="144" alt="empire_banner"/></a>      
+          <a runat="server" href="~/Default.aspx"><img runat="server" src="~/Image/logo.png" alt="empire_logo" width="310" height="145"/></a>
+          <a runat="server" href="~/Default.aspx"><img runat="server" src="~/Image/empire_banner2.png" width="567" height="144" alt="empire_banner"/></a>      
 	    </div>
 	
 	<div id="top_nav">
 		<hr />
 		<ul>
-		<li><a href="~/Default.aspx">Home</a></li>
-		<li><a href="~/Accommodation.aspx">Accommodation</a></li>
-		<li><a href="~/Other_Services.aspx">Other Services</a></li>
-		<li><a href="~/Contact.aspx">Contact Us</a></li>
-        <li><a href="~/Login.aspx">Login</a></li>
+		<li><a runat="server" href="~/Default.aspx">Home</a></li>
+		<li><a runat="server" href="~/Accommodation.aspx">Accommodation</a></li>
+		<li><a runat="server" href="~/Other_Services.aspx">Other Services</a></li>
+		<li><a runat="server" href="~/Contact.aspx">Contact Us</a></li>
+        <li><a runat="server" href="~/Login.aspx">Login</a></li>
 		</ul>
 		<hr />
 	</div>
@@ -42,14 +42,14 @@
         <div id="footer">
             <div id="footer_left">
                 <p>Copyright &copy; 2017 | Booking & Travel 	|&nbsp; 
-                <a href="Admin.html">Administrator</a></p>
-                <a href="http://validator.w3.org/check?uri=referer">Validate HTML</a>
-		        <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
-		        <a href="http://achecker.ca/checker/?uri=referer">Check WCAG</a>
+                <a runat="server" href="~/Admin.html">Administrator</a></p>
+                <a runat="server" href="http://validator.w3.org/check?uri=referer">Validate HTML</a>
+		        <a runat="server" href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
+		        <a runat="server" href="http://achecker.ca/checker/?uri=referer">Check WCAG</a>
             </div>
 		    <div id="footer_right">
-		    <a target="_blank" href="http://www.facebook.com/pages/The-Empire-Hotel-Country-Club-Brunei/149237025097533"><img alt="fb_logo" src="Image/Icon/facebook.png" /></a>
-		    <a target="_blank" href="http://instagram.com/theempirehotelbrunei"><img alt="insta_logo" src="Image/Icon/instagram.png" /></a>
+		    <a runat="server" target="_blank" href="http://www.facebook.com/pages/The-Empire-Hotel-Country-Club-Brunei/149237025097533"><img alt="fb_logo" runat="server" src="~/Image/Icon/facebook.png" /></a>
+		    <a runat="server" target="_blank" href="http://instagram.com/theempirehotelbrunei"><img alt="insta_logo" runat="server" src="~/Image/Icon/instagram.png" /></a>
             </div>
          </div>
 	</div>

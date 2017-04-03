@@ -39,7 +39,7 @@
 		  </div>                
 		</div>
                 			
-		<div id="map"><img src="Image/hpcmap.jpg" alt="map"/></div>
+		<div id="map"><img runat="server" src="~/Image/hpcmap.jpg" alt="map"/></div>
         <script src="JS/maps.js"></script>
         <script async defer
       	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbTyJPsUluUCqXDUWLK1GFIXAbbA4E26o&callback=myMap">
