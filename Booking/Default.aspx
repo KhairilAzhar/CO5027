@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Booking.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Booking.Default" %>
+﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Booking.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Booking.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -10,55 +10,49 @@
 	</div>
 
     <script type="text/javascript" src="JS/slideshow.js"></script>
-                			
-	<div id="second_content">		
-  
+    		
+	<div id="second_content">  
   		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  		<script type="text/javascript" src="JS/datepicker.js"></script>
-  
-        <form id= "book" action="/action_page.php">
+  		<script type="text/javascript" src="JS/datepicker.js"></script>  
           <div class="book_content">
           <div>Check In: 
-          <br>
-          <input id="datepicker" name="check_in" type="text" ></div>
+          <br/>
+          <input id="datepicker" name="check_in" type="text" /></div>
           </div>
           <div class="book_content">
           <div>Check Out:
-          <br>
-          <input id="datepicker2" name="check_out" type="text" > </div>
+          <br/>
+          <input id="datepicker2" name="check_out" type="text" /> </div>
           </div>
           <div class="book_content">
           <div>Adult:
-          <br>
-          <input type="number"></div>
+          <br/>
+          <input type="number"/></div>
           </div>
           <div class="book_content">
           <div>Kids:
-          <br>
-          <input type="number"></div>
+          <br/>
+          <input type="number"/></div>
           </div>
           <div class="book_content">
-          <br>
-          <div><input type="submit" value="Submit"></div>
-          </div>
-        </form> 
-        
-	</div>
-        
+          <br/>
+          <div><input type="submit" value="Submit"/></div>
+          </div>        
+	</div>        
     <div id="third_content">
         <h2>Available rooms left:</h2>
 			<div class="book_available">         
               <a runat="server" href="~/Image/_MG_0975.jpg">
                 <img alt="accommodation_ambassador" width="200" height="120" runat="server" src="~/Image/_MG_0975.jpg" />
               </a>
-              <h4>Ambassador & Embassy</h4>
+              <h4>Ambassador &amp; Embassy</h4>
             </div>
             <div class="book_available">
               <a runat="server" href="~/Image/slide-Ocean-Superior2.jpg">
                 <img alt="accommodation_superior" width="200" height="120" runat="server" src="~/Image/slide-Ocean-Superior2.jpg" />
               </a>
-              <h4>Ocean & Superior</h4>
+              <h4>Ocean &amp; Superior</h4>
             </div>
             <div class="book_available">
               <a runat="server" href="~/Image/deluxe_room.jpg">
@@ -76,8 +70,7 @@
               <a runat="server" href="~/Image/_MG_0975.jpg">
               <img alt="accommodation_ambassador" width="200" height="120" runat="server" src="~/Image/_MG_0975.jpg" />
               </a>
-              <h4>Ambassador & Embassy</h4>
-            </div>          
-                
-	</div>	  
+              <h4>Ambassador &amp; Embassy</h4>
+            </div>                
+    </div>
 </asp:Content>

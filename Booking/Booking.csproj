@@ -94,9 +94,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Accommodation.aspx" />
+    <Content Include="Admin.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="CSS\jquery-ui.css" />
-    <Content Include="CSS\mySlides.css" />
     <Content Include="CSS\Style.css" />
     <Content Include="Default.aspx" />
     <Content Include="Image\004531-15-exterior.jpg" />
@@ -132,11 +133,14 @@
     <Content Include="JS\menu_image.js" />
     <Content Include="JS\slides.js" />
     <Content Include="JS\slideshow.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Other_Services.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Booking.Master" />
+    <None Include="Properties\PublishProfiles\1525606.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -149,6 +153,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accommodation.aspx.cs">
+      <DependentUpon>Accommodation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accommodation.aspx.designer.cs">
+      <DependentUpon>Accommodation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Booking.Master.cs">
       <DependentUpon>Booking.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -172,6 +190,20 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Other_Services.aspx.cs">
+      <DependentUpon>Other_Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Other_Services.aspx.designer.cs">
+      <DependentUpon>Other_Services.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

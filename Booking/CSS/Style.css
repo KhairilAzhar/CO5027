@@ -68,7 +68,7 @@ hr					{
 						font-weight:bold;
 						}
 						
-#top_nav ul li	a:visited {color:purple;}
+#top_nav ul li	a:visited {color:crimson;}
 
 /* Content Section */
 #content_wrapper 	{width:900px; padding:10px 0 10px 0;}
@@ -142,10 +142,11 @@ hr					{
 
 
 /* Footer */
-#footer 			    {width:900px; clear:both; padding:1px 0; border-top:1px white solid;}
+#footer 			    {width:900px; height: 80px; clear:both; padding:1px 0; border-top:1px white solid; border-bottom: 1px white solid}
 #footer_left p 			{text-align:left; font-size:14px; font-weight:bold; color: black; margin-left:20px;}
-#footer_left a 			{text-align:left; font-size:14px; font-weight:bold; color: black; margin-left:20px;}
+#footer_left a 			{text-align:left; font-size:14px; font-weight:bold; color: black; margin: 0px 0px 20px 20px;}
 #footer_left a:hover	{color:aqua;}
-#footer_left a:visited	{color:purple;}
+#footer_left a:visited	{color:crimson;}
 #footer_left		    {width:500px; float:left;}
 #footer_right		    {width:200px; float:right; margin-top: 20px;}
+#footer_right a		    {float:right; margin-right:10px;}
