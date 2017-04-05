@@ -28,7 +28,7 @@
 		<ul>
 		<li><a runat="server" href="~/Default.aspx">Home</a></li>
 		<li><a runat="server" href="~/Accommodation.aspx">Accommodation</a></li>
-		<li><a runat="server" href="~/Other_Services.aspx">Other Services</a></li>
+		<li><a runat="server" href="~/Gallery.aspx">Gallery</a></li>
 		<li><a runat="server" href="~/Contact.aspx">Contact Us</a></li>
         <li><a runat="server" href="~/Login.aspx">Login</a></li>
 		</ul>

@@ -11,7 +11,7 @@ namespace Booking
 {
 
 
-    public partial class Other_Services
+    public partial class Gallery
     {
     }
 }
