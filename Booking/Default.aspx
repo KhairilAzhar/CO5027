@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Booking.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Booking.Default" %>
+﻿<%@ Page Title="Booking &amp; Travel" Language="C#" MasterPageFile="~/Booking.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Booking.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -16,22 +16,22 @@
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   		<script type="text/javascript" src="JS/datepicker.js"></script>  
           <div class="book_content">
-          <div>Check In: 
+          <div><label>Check In:</label>
           <br/>
           <input id="datepicker" name="check_in" type="text" /></div>
           </div>
           <div class="book_content">
-          <div>Check Out:
+          <div><label>Check Out:</label>
           <br/>
           <input id="datepicker2" name="check_out" type="text" /> </div>
           </div>
           <div class="book_content">
-          <div>Adult:
+          <div><label>Adult:</label>
           <br/>
           <input type="number"/></div>
           </div>
           <div class="book_content">
-          <div>Kids:
+          <div><label>Kids:</label>
           <br/>
           <input type="number"/></div>
           </div>

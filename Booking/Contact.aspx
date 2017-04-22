@@ -24,19 +24,20 @@
                     </p>
 			</div>
             <div id="mail">
-                <form id="mailform" action="mailto:info@theempirehotel.com" method="get">
                    <fieldset>
                     <legend>Please insert message here:</legend><br/>
-                    <label>Your name:</label><br/>
-                    <input type="text" name="username" placeholder="Your name..."/><br/><br/>
-                    <label>Email address:</label><br/>
-                    <input type="text" name="emailaddress" placeholder="Your email address..."/><br/><br/>
-                    <label>Your message:</label><br/>
-                    <textarea id="message" name="message" placeholder="Your message..."></textarea><br/><br/>
-                    <input id="sendmail" type="submit" value="Send"/>
+                    <asp:Label runat="server" ID="lblName" Font-Bold="True">Your name:</asp:Label><br/>
+                    <asp:TextBox runat="server" placeholder="Your name..." ID="txtName"></asp:TextBox><br/><br/>
+                    <asp:Label runat="server" ID="lblSubject" Font-Bold="True">Subject:</asp:Label><br/>
+                    <asp:TextBox runat="server" placeholder="Subject..." ID="txtSubject"></asp:TextBox><br/><br/>
+                    <asp:label runat="server" ID="lblEmail" Font-Bold="True">Email address:</asp:label><br/>
+                    <asp:TextBox runat="server" placeholder="Your email address..." ID="txtEmail"></asp:TextBox><br/><br/>
+                    <asp:label runat="server" ID="lblMessage" Font-Bold="True">Your message:</asp:label><br/>
+                    <asp:TextBox runat="server" placeholder="Your message..." ID="txtMessage" TextMode="MultiLine" Height="75px" Width="338px"></asp:TextBox><br/><br/>
+                    <asp:Button ID="btnSendMail" runat="server" Text="Send" OnClick="btnSendMail_Click" /><br/><br/>
+                    <asp:Literal ID="litResult" runat="server"></asp:Literal>
                   </fieldset>
-                </form>
-		  </div>                
+		  </div>
 		</div>
                 			
 		<div id="map"><img runat="server" src="~/Image/hpcmap.jpg" alt="map"/></div>

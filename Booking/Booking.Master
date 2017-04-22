@@ -9,6 +9,7 @@
         <meta name="keywords" content="Booking, Travel, Empire, Hotel, Accommodation, Spa, Ambassador" />
         <meta name="author" content="Khairil Azhar" />
         <link href="~/CSS/Style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
         <link href="~/CSS/jquery-ui.css" rel="stylesheet" type="text/css" />    
         <script type="text/javascript" src="JS/menu_image.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">

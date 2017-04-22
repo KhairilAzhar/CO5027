@@ -60,7 +60,8 @@ hr					{
 					text-align:center;
 					margin: 0px 5px;
 					padding: 2px 6px;
-					color: white;					
+					color: white;
+                    text-decoration:none;				
 					}
 					
 #top_nav ul li a:hover {						
@@ -84,10 +85,10 @@ hr					{
 
 #book					{float:left; width:900px; margin: 20px 0px 20px 20px;}
 
-#second_content					{float: right; width:900px; background-color: #DFF4FF; margin-bottom:20px;}
+#second_content					{float: right; width:900px; height: 60px; background-color: #DFF4FF; margin-bottom:20px;}
 #second_content h2				{color:gold; margin-left:20px;}
 
-.book_content			{float:left; width: 160px; display:inline-block; margin-left:20px;}
+.book_content			{float:left; width: 160px; display:inline-block; margin: 10px 0px 5px 20px;}
 .book_available			{float:left; width: 200px; display:inline-block; margin-left:20px;}
 
 #third_content					{float: left; width:900px; background-color:#BFEBFF; margin-bottom:20px;}
@@ -129,17 +130,19 @@ hr					{
 #mail h2 a:visited		{color:purple;}
 #mail h3 				{color:white;}
 #mail p					{font-size:14px; line-height:140%; text-align:justify; color: black; margin: 0px 10px 10px 10px;}
-#mail ul li 			{color: white; margin: 0px 5px;}
 #mail label				{font-weight: bold;}
 #mail legend			{font-weight: bold;}
 #mail input				{width: 200px;}
-#mail textarea			{width: 200px; height:100px;}
-#mailform				{margin: 10px;}
+#mail textarea			{
+}
+#mail fieldset          {margin: 10px;}
 #sendmail				{font-weight: bold; margin-bottom: 10px;}
 
 #map					{float: right; width:900px; height:350px; background-color: #DFF4FF; margin-bottom:20px;}
 
-
+.gallery_content        {max-width: 900px;}
+.gallSlides             {display:none;}
+.demo                   {cursor:pointer;}
 
 /* Footer */
 #footer 			    {width:900px; height: 80px; clear:both; padding:1px 0; border-top:1px white solid; border-bottom: 1px white solid}
