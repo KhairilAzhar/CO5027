@@ -18,7 +18,7 @@
           <div class="book_content">
           <div><label>Check In:</label>
           <br/>
-          <input id="datepicker" name="check_in" type="text" /></div>
+          <input id="datepicker" name="check_in" type="text"/></div>
           </div>
           <div class="book_content">
           <div><label>Check Out:</label>
@@ -41,36 +41,36 @@
           </div>        
 	</div>        
     <div id="third_content">
-        <h2>Available rooms left:</h2>
+        <h3>Available rooms left:</h3>
 			<div class="book_available">         
               <a runat="server" href="~/Image/_MG_0975.jpg">
                 <img alt="accommodation_ambassador" width="200" height="120" runat="server" src="~/Image/_MG_0975.jpg" />
               </a>
-              <h4>Ambassador &amp; Embassy</h4>
+              <h5>Ambassador &amp; Embassy</h5>
             </div>
             <div class="book_available">
               <a runat="server" href="~/Image/slide-Ocean-Superior2.jpg">
                 <img alt="accommodation_superior" width="200" height="120" runat="server" src="~/Image/slide-Ocean-Superior2.jpg" />
               </a>
-              <h4>Ocean &amp; Superior</h4>
+              <h5>Ocean &amp; Superior</h5>
             </div>
             <div class="book_available">
               <a runat="server" href="~/Image/deluxe_room.jpg">
               <img alt="accommodation_deluxe" width="200" height="120" runat="server" src="~/Image/deluxe_room.jpg" />
               </a>
-            <h4>Deluxe Rooms</h4>
+            <h5>Deluxe Rooms</h5>
             </div>
             <div class="book_available">
               <a runat="server" href="~/Image/deluxe_room.jpg">
               <img alt="accommodation_deluxe" width="200" height="120" runat="server" src="~/Image/deluxe_room.jpg" />
               </a>
-              <h4>Deluxe Rooms</h4>
+              <h5>Deluxe Rooms</h5>
             </div>
             <div class="book_available">
               <a runat="server" href="~/Image/_MG_0975.jpg">
               <img alt="accommodation_ambassador" width="200" height="120" runat="server" src="~/Image/_MG_0975.jpg" />
               </a>
-              <h4>Ambassador &amp; Embassy</h4>
+              <h5>Ambassador &amp; Embassy</h5>
             </div>                
     </div>
 </asp:Content>
