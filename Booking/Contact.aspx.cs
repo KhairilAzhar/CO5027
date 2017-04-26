@@ -35,12 +35,16 @@ namespace Booking
                 System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("syawal2687@gmail.com", "$y4w4L510");
                 smtpClient.Credentials = credentials;
                 msg.Subject = "Name: " + txtName.Text + " Subject: " + txtSubject.Text;
-                msg.Body = txtEmail.Text + "\r\n" + txtMessage.Text;
+                msg.Body = "Name: " + txtName.Text + "\r\n" + "Email: " + txtEmail.Text + "\r\n" + "\r\n" + "Message: " + txtMessage.Text;
 
                 try
                 {
                     smtpClient.Send(msg);
                     litResult.Text = "<p>Success, mail sent using SMTP with secure connection and credentials</p>";
+                    txtName.Text = "";
+                    txtSubject.Text = "";
+                    txtEmail.Text = "";
+                    txtMessage.Text = "";
                     //Response.Write("<script>alert('Your message successfully sent! Thank you for contacting us.');</script>");
                 }
                 catch (Exception ex)

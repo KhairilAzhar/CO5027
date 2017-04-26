@@ -114,6 +114,7 @@
     <Content Include="Admin.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="CSS\jquery-ui.css" />
+    <Content Include="CSS\slides.css" />
     <Content Include="CSS\Style.css" />
     <Content Include="Default.aspx" />
     <Content Include="Gallery.aspx" />
@@ -164,7 +165,6 @@
     <Content Include="JS\datepicker.js" />
     <Content Include="JS\gallery.js" />
     <Content Include="JS\maps.js" />
-    <Content Include="JS\menu_image.js" />
     <Content Include="JS\slides.js" />
     <Content Include="JS\slideshow.js" />
     <Content Include="Login.aspx" />
