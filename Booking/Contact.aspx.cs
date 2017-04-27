@@ -23,7 +23,7 @@ namespace Booking
                 //credentials - e.g. username and password for the account
                 SmtpClient smtpClient = new SmtpClient();
 
-                MailMessage msg = new MailMessage(txtEmail.Text, "syawal2687@gmail.com");
+                MailMessage msg = new MailMessage(txtEmail.Text, "lcb1525606@gmail.com");
 
 
                 //settings specific to the mail service, e.g. server location, port number and that ssl is required
@@ -32,15 +32,15 @@ namespace Booking
                 smtpClient.EnableSsl = true;
 
 
-                System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("syawal2687@gmail.com", "$y4w4L510");
+                System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("lcb1525606@gmail.com", "P@55word");
                 smtpClient.Credentials = credentials;
                 msg.Subject = "Name: " + txtName.Text + " Subject: " + txtSubject.Text;
-                msg.Body = "Name: " + txtName.Text + "\r\n" + "Email: " + txtEmail.Text + "\r\n" + "\r\n" + "Message: " + txtMessage.Text;
+                msg.Body = "Name: " + txtName.Text + "\r\n" + "Email: " + txtEmail.Text + "\r\n" + "\r\n" + "Message: " + "\r\n" + "\r\n" + txtMessage.Text;
 
                 try
                 {
                     smtpClient.Send(msg);
-                    litResult.Text = "<p>Success, mail sent using SMTP with secure connection and credentials</p>";
+                    litResult.Text = "<p>Success, mail sent using SMTP with secure connection and credentials. Thank you for your email!</p>";
                     txtName.Text = "";
                     txtSubject.Text = "";
                     txtEmail.Text = "";
