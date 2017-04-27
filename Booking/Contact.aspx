@@ -32,7 +32,10 @@
                        <asp:RequiredFieldValidator ID="rfvname" runat="server" ErrorMessage="*Please insert your name" ControlToValidate="txtName" ForeColor="Red"></asp:RequiredFieldValidator>
                        <br/><br/>                        
                     <asp:Label runat="server" ID="lblSubject" Font-Bold="True">Subject:</asp:Label><br/>
-                    <asp:TextBox runat="server" placeholder="Subject..." ID="txtSubject"></asp:TextBox><br/><br/>
+                    <asp:TextBox runat="server" placeholder="Subject..." ID="txtSubject"></asp:TextBox>
+                       <br/>
+                       <asp:RequiredFieldValidator ID="rfvsubject" runat="server" ErrorMessage="*Please insert your subject" ControlToValidate="txtSubject" ForeColor="Red"></asp:RequiredFieldValidator>
+                       <br/><br/>
                     <asp:label runat="server" ID="lblEmail" Font-Bold="True">Email address:</asp:label><br/>
                     <asp:TextBox runat="server" placeholder="Your email address..." ID="txtEmail"></asp:TextBox>
                        <br/>
@@ -41,7 +44,9 @@
                        <asp:RegularExpressionValidator ID="revEmailValid" runat="server" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="txtEmail" ErrorMessage="*Please enter a valid email" ForeColor="Red"></asp:RegularExpressionValidator>
                        <br/><br/>                       
                     <asp:label runat="server" ID="lblMessage" Font-Bold="True">Your message:</asp:label><br/>
-                    <asp:TextBox runat="server" placeholder="Your message..." ID="txtMessage" TextMode="MultiLine" Height="75px" Width="338px"></asp:TextBox><br/><br/>
+                    <asp:TextBox runat="server" placeholder="Your message..." ID="txtMessage" TextMode="MultiLine" Height="75px" Width="338px"></asp:TextBox><br/>
+                       <asp:RequiredFieldValidator ID="rfvmessage" runat="server" ErrorMessage="*Please insert your message" ControlToValidate="txtMessage" ForeColor="Red"></asp:RequiredFieldValidator>
+                       <br/><br/>
                     <asp:Button ID="btnSendMail" runat="server" Text="Send" OnClick="btnSendMail_Click" /><br/><br/>
                     <asp:Literal ID="litResult" runat="server"></asp:Literal>
                   </fieldset>
