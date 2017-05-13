@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
 
 namespace Booking
 {
@@ -16,7 +19,46 @@ namespace Booking
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            var identityDbContext = new IdentityDbContext("IdentityConnectionString");
+            var userStore = new UserStore<IdentityUser>(identityDbContext);
+            var userManager = new UserManager<IdentityUser>(userStore);
+            var user = userManager.Find(txtUser.Text, txtPassword.Text);
 
+            if (user !=null)
+            {
+                LogUserIn(userManager, user);
+            }
+            else
+            {
+                litLogin.Text = "Invalid username or password.";
+            }
+        }
+
+        private void LogUserIn(UserManager<IdentityUser> usermanager, IdentityUser user)
+        {
+            var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+            var userIdentity = usermanager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+            authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
+        }
+               
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            //connection string
+            var identityDbContext = new IdentityDbContext("IdentityConnectionString");
+
+            var userStore = new UserStore<IdentityUser>(identityDbContext);
+            var manager = new UserManager<IdentityUser>(userStore);
+
+            var user = new IdentityUser() { UserName = txtEmail.Text, Email = txtEmail.Text };
+            IdentityResult result = manager.Create(user, txtPswd.Text);
+            if (result.Succeeded)
+            {
+                
+            }
+            else
+            {
+                litRegister.Text = "An error has occured: " + result.Errors.FirstOrDefault();
+            }
         }
     }
 }
