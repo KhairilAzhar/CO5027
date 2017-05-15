@@ -92,9 +92,11 @@ hr					{
 .book_available			{float:left; width: 200px; display:inline-block; margin-left:20px;}
 
 #third_content					{float: left; width:900px; background-color:#BFEBFF; margin-bottom:20px;}
+#gvRoom                         {margin-left:20px;}
 #third_content h3				{color:black; margin-left:20px;}
 #third_content p				{font-size:14px; line-height:140%; text-align:justify; color: white; margin-left:10px;}
 #third_content ul li 			{color: white; margin: 0px 5px;}
+.gvRates                        {margin-left:20px;}
 
 #left_content					{float:left; width:180px; background-color:#FFF; margin:10px 10px;}
 #left_content h2 a				{color:gold; margin-left:10px;}
@@ -144,6 +146,8 @@ hr					{
 #sign_content 			{float:left; width:900px; margin-bottom:20px; background-color:#BFEBFF}
 #login_content			{float:left; width:400px; background-color:#FFF; margin:10px 10px;}
 #login_content h4       {font-weight:bold;}
+.log_box                {margin-bottom:20px;}
+
 
 /* Footer */
 #footer 			    {width:900px; height: 80px; clear:both; padding:1px 0; border-top:1px white solid; border-bottom: 1px white solid}

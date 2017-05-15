@@ -14,51 +14,68 @@ namespace Booking
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (User.Identity.IsAuthenticated)
+                {
+                    litStatus.Text = string.Format("Hello {0}!!", User.Identity.GetUserName());
+                    LoginStatus.Visible = true;
+                    Logout.Visible = true;
+                }
+                else
+                {
+                    LoginForm.Visible = true;
+                }
+            }
+        }
 
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            var userStore = new UserStore<IdentityUser>();
+            var manager = new UserManager<IdentityUser>(userStore);
+
+            var user = new IdentityUser() { UserName = txtEmail.Text };
+            IdentityResult result = manager.Create(user, txtPswd.Text);
+
+            if (result.Succeeded)
+            {
+                var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+                var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+                authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
+                Response.Redirect("~/Login.aspx");
+            }
+            else
+            {
+                litRegister.Text = result.Errors.FirstOrDefault();
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            var identityDbContext = new IdentityDbContext("IdentityConnectionString");
-            var userStore = new UserStore<IdentityUser>(identityDbContext);
+            var userStore = new UserStore<IdentityUser>();
             var userManager = new UserManager<IdentityUser>(userStore);
             var user = userManager.Find(txtUser.Text, txtPassword.Text);
 
-            if (user !=null)
+            if (user != null)
             {
-                LogUserIn(userManager, user);
+                var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+                var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+
+                authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = false }, userIdentity);
+                Response.Redirect("~/Login.aspx");
             }
             else
             {
-                litLogin.Text = "Invalid username or password.";
+                litStatus.Text = "Invalid username or password.";
+                LoginStatus.Visible = true;
             }
         }
 
-        private void LogUserIn(UserManager<IdentityUser> usermanager, IdentityUser user)
+        protected void btnLogout_Click(object sender, EventArgs e)
         {
             var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
-            var userIdentity = usermanager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
-            authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
-        }
-               
-        protected void btnSubmit_Click(object sender, EventArgs e)
-        {
-            //connection string
-            var identityDbContext = new IdentityDbContext("IdentityConnectionString");
-
-            var userStore = new UserStore<IdentityUser>(identityDbContext);
-            var manager = new UserManager<IdentityUser>(userStore);
-
-            var user = new IdentityUser() { UserName = txtEmail.Text, Email = txtEmail.Text };
-            IdentityResult result = manager.Create(user, txtPswd.Text);
-            if (result.Succeeded)
-            {
-                
-            }
-            else
-            {
-                litRegister.Text = "An error has occured: " + result.Errors.FirstOrDefault();
-            }
+            authenticationManager.SignOut();
+            Response.Redirect("~/Login.aspx");
         }
     }
 }

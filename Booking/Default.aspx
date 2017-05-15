@@ -42,35 +42,16 @@
 	</div>        
     <div id="third_content">
         <h3>Available rooms left:</h3>
-			<div class="book_available">         
-              <a runat="server" href="~/Image/_MG_0975.jpg">
-                <img alt="accommodation_ambassador" width="200" height="120" runat="server" src="~/Image/_MG_0975.jpg" />
-              </a>
-              <h5>Ambassador &amp; Embassy</h5>
-            </div>
-            <div class="book_available">
-              <a runat="server" href="~/Image/slide-Ocean-Superior2.jpg">
-                <img alt="accommodation_superior" width="200" height="120" runat="server" src="~/Image/slide-Ocean-Superior2.jpg" />
-              </a>
-              <h5>Ocean &amp; Superior</h5>
-            </div>
-            <div class="book_available">
-              <a runat="server" href="~/Image/deluxe_room.jpg">
-              <img alt="accommodation_deluxe" width="200" height="120" runat="server" src="~/Image/deluxe_room.jpg" />
-              </a>
-            <h5>Deluxe Rooms</h5>
-            </div>
-            <div class="book_available">
-              <a runat="server" href="~/Image/deluxe_room.jpg">
-              <img alt="accommodation_deluxe" width="200" height="120" runat="server" src="~/Image/deluxe_room.jpg" />
-              </a>
-              <h5>Deluxe Rooms</h5>
-            </div>
-            <div class="book_available">
-              <a runat="server" href="~/Image/_MG_0975.jpg">
-              <img alt="accommodation_ambassador" width="200" height="120" runat="server" src="~/Image/_MG_0975.jpg" />
-              </a>
-              <h5>Ambassador &amp; Embassy</h5>
-            </div>                
+			<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="BookingDataSource">
+                <Columns>
+                    <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" Visible="False" />
+                    <asp:BoundField DataField="Name" HeaderText="Product Name" SortExpression="Name" />
+                    <asp:BoundField DataField="Price" HeaderText="Room Rates (BND)" SortExpression="Price" />
+                    <asp:BoundField DataField="Amenities" HeaderText="Room Amenities" SortExpression="Amenities" />
+                </Columns>
+                </asp:GridView>
+                             
+        <asp:SqlDataSource ID="BookingDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:db_1525606_bookingConnectionString %>" SelectCommand="SELECT [Id], [Name], [Price], [Amenities] FROM [tblRoom] ORDER BY [Id]"></asp:SqlDataSource>
+                             
     </div>
 </asp:Content>
