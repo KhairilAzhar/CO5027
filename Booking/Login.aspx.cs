@@ -42,7 +42,8 @@ namespace Booking
                 var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
                 var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
                 authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
-                Response.Redirect("~/Login.aspx");
+                litRegister.Text = string.Format("User {0} was created successfully!", user.UserName);
+                
             }
             else
             {

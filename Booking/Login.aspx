@@ -54,7 +54,9 @@
                 <asp:TextBox ID="txtEmail" runat="server" ></asp:TextBox>
                 </div>
                 <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail" ValidationGroup="GroupReg" ErrorMessage="*Please enter your email" ForeColor="Red"></asp:RequiredFieldValidator>
+                <div>
                 <asp:RegularExpressionValidator ID="revEmailValid" runat="server" ValidationGroup="GroupReg" ValidationExpression ="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="txtEmail" ErrorMessage="*Please enter a valid email" ForeColor="Red"></asp:RegularExpressionValidator>
+                </div>
             </div>
             <div class="log_box">         
 		        <asp:Label ID="lblPswd" runat="server" AssociatedControlID="txtPswd">Password:</asp:Label>
@@ -68,7 +70,7 @@
                 <div>
                 <asp:TextBox runat="server" ID="txtConfirm" TextMode="Password" />
                 </div>
-                <asp:CompareValidator ID="cvPassword" ValidationGroup="GroupReg" runat="server" ErrorMessage="Password entered not match!" ControlToValidate="txtConfirm"></asp:CompareValidator>
+                <asp:CompareValidator ID="cvPassword" ValidationGroup="GroupReg" runat="server" ErrorMessage="*Password entered not match!" ControlToValidate="txtConfirm" ForeColor="Red"></asp:CompareValidator>
         </div>
             <div class="log_box">          
                 <div>

@@ -50,7 +50,7 @@
             <ItemTemplate>
                 <div class="book_available">                    
                     <a href="<%# Eval("Id", "ViewProduct.aspx?Id={0}") %>">
-                        <img src="~/ProductImages/1.jpg" width="120" height="100" runat="server"/>
+                        <img src="~/ProductImages/1.jpg" alt="product1_SuperiorRoom" width="120" height="100" runat="server"/>
                         <div><%#Eval("Name") %></div>
                         <div>BND$: <%#Eval("Price") %></div>
                     </a>
