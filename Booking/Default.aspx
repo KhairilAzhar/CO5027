@@ -42,16 +42,23 @@
 	</div>        
     <div id="third_content">
         <h3>Available rooms left:</h3>
-			<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="BookingDataSource">
-                <Columns>
-                    <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" Visible="False" />
-                    <asp:BoundField DataField="Name" HeaderText="Product Name" SortExpression="Name" />
-                    <asp:BoundField DataField="Price" HeaderText="Room Rates (BND)" SortExpression="Price" />
-                    <asp:BoundField DataField="Amenities" HeaderText="Room Amenities" SortExpression="Amenities" />
-                </Columns>
-                </asp:GridView>
-                             
-        <asp:SqlDataSource ID="BookingDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:db_1525606_bookingConnectionString %>" SelectCommand="SELECT [Id], [Name], [Price], [Amenities] FROM [tblRoom] ORDER BY [Id]"></asp:SqlDataSource>
-                             
+
+        
+
+        <asp:Repeater ID="rptrRoom" runat="server" DataSourceID="RoomSource">
+            <HeaderTemplate><div></HeaderTemplate>
+            <ItemTemplate>
+                <div class="book_available">                    
+                    <a href="<%# Eval("Id", "ViewProduct.aspx?Id={0}") %>">
+                        <img src="~/ProductImages/1.jpg" width="120" height="100" runat="server"/>
+                        <div><%#Eval("Name") %></div>
+                        <div>BND$: <%#Eval("Price") %></div>
+                    </a>
+                </div>
+            </ItemTemplate>
+            <FooterTemplate></div></FooterTemplate>
+            </asp:Repeater>
+                          
+        <asp:SqlDataSource ID="RoomSource" runat="server" ConnectionString="<%$ ConnectionStrings:db_1525606_bookingConnectionString %>" SelectCommand="SELECT [Id], [Name], [Price], [Amenities] FROM [tblRoom] ORDER BY [Id]"></asp:SqlDataSource>
     </div>
 </asp:Content>

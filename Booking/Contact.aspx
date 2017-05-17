@@ -45,7 +45,7 @@
                         <div>
                         <asp:TextBox runat="server" placeholder="Your email address..." ID="txtEmail"></asp:TextBox>
                         </div>
-                        <asp:RequiredFieldValidator ID="rfvemail" runat="server" ControlToValidate="txtEmail" ErrorMessage="*Please enter your email" ForeColor="Red"></asp:RequiredFieldValidator>                       
+                        <asp:RequiredFieldValidator ID="rfvemail" runat="server" ControlToValidate="txtEmail" ErrorMessage="*Please enter your email" ForeColor="Red"></asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator ID="revEmailValid" runat="server" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="txtEmail" ErrorMessage="*Please enter a valid email" ForeColor="Red"></asp:RegularExpressionValidator>
                     </div>  
                     <div class="log_box">                     

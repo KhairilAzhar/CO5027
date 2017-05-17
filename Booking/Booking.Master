@@ -41,7 +41,7 @@
         <div id="footer">
             <div id="footer_left">
                 <p>Copyright &copy; 2017 | Booking & Travel 	|&nbsp; 
-                <a runat="server" href="~/Admin.aspx">Administrator</a></p>
+                <a runat="server" href="~/Admin/EditPage.aspx">Administrator</a></p>
                 <a runat="server" href="http://validator.w3.org/check?uri=referer">Validate HTML</a>
 		        <a runat="server" href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
 		        <a runat="server" href="http://achecker.ca/checker/?uri=referer">Check WCAG</a>
