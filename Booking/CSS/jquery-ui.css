@@ -6,6 +6,8 @@
 
 /* Layout helpers
 ----------------------------------*/
+
+/* Reference from jqueryui.com. (2017). Datepicker.   Retrieved from https://jqueryui.com/datepicker/ */
 .ui-helper-hidden {
 	display: none;
 }

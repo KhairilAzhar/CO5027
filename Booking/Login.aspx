@@ -70,7 +70,7 @@
                 <div>
                 <asp:TextBox runat="server" ID="txtConfirm" TextMode="Password" />
                 </div>
-                <asp:CompareValidator ID="cvPassword" ValidationGroup="GroupReg" runat="server" ErrorMessage="*Password entered not match!" ControlToValidate="txtConfirm" ForeColor="Red"></asp:CompareValidator>
+                
         </div>
             <div class="log_box">          
                 <div>
